@@ -1,0 +1,157 @@
+ruby-multi-json (1.14.1-1) unstable; urgency=medium
+
+  [ Antonio Terceiro ]
+  * Remove myself from Uploaders:
+
+  [ Utkarsh Gupta ]
+  * Add salsa-ci.yml
+
+  [ Cédric Boutillier ]
+  * New upstream version 1.14.1
+  * Trim trailing whitespace.
+  * Use secure copyright file specification URI.
+  * debian/control: Remove empty control field Uploaders.
+  * Use secure URI in Homepage field.
+  * Set upstream metadata fields: Bug-Database, Repository, Repository-
+    Browse.
+  * Set github as source in watch file to get tests
+  * Refresh disable_non_oj_tests patch
+    + disable tests about jr_jackson
+  * Refresh fix_encoding.patch
+  * Add myself to uploaders
+
+ -- Cédric Boutillier <boutil@debian.org>  Thu, 02 Jan 2020 20:11:23 +0100
+
+ruby-multi-json (1.12.1-1) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Cédric Boutillier ]
+  * Bump debhelper compatibility level to 9
+  * Remove version in the gem2deb build-dependency
+  * Use https:// in Vcs-* fields
+  * Use https:// in Vcs-* fields
+  * Bump Standards-Version to 3.9.7 (no changes needed)
+  * Run wrap-and-sort on packaging files
+
+  [ Lucas Nussbaum ]
+  * New upstream version 1.12.1
+  * d/control: refresh.
+    + Bump Standards-Version.
+  * d/rules: check dependencies during tests
+  * d/watch: use gemwatch
+
+ -- Lucas Nussbaum <lucas@debian.org>  Sun, 02 Jul 2017 00:40:13 +0200
+
+ruby-multi-json (1.11.2-3) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Laurent Bigonville ]
+  * Remove myself from the uploaders
+
+  [ Christian Hofstaedtler ]
+  * Disable tests requiring non-oj libs (Closes: #798537)
+
+ -- Christian Hofstaedtler <zeha@debian.org>  Sat, 19 Dec 2015 19:37:31 +0000
+
+ruby-multi-json (1.11.2-2) unstable; urgency=medium
+
+  * Team upload.
+  * Only build/test with Oj. This cuts the dependency chain quite a bit, and
+    all consumers of this library will get Oj anyway (as it's the default).
+    So far there are no consumers in Debian that use multi-json to load
+    a different library than the default selected by multi-json.
+
+ -- Christian Hofstaedtler <zeha@debian.org>  Tue, 08 Sep 2015 11:48:22 +0000
+
+ruby-multi-json (1.11.2-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Antonio Terceiro <terceiro@debian.org>  Fri, 14 Aug 2015 11:50:56 -0300
+
+ruby-multi-json (1.11.0-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release.
+  * Update Vcs-Browser to use cgit.
+
+ -- Lucas Nussbaum <lucas@debian.org>  Wed, 06 May 2015 21:19:02 +0200
+
+ruby-multi-json (1.10.1-1) unstable; urgency=medium
+
+  * Team upload
+  * Imported Upstream version 1.10.1
+  * Bump Standards-Version to 3.9.6 (no changes needed)
+  * Set Testsuite field to autopkgtest-pkg-ruby
+  * Use the code from upstream Rakefile to run the tests
+  * Update entry for lib/multi_json/vendor/okjson.rb in copyright file
+
+ -- Cédric Boutillier <boutil@debian.org>  Wed, 08 Oct 2014 22:35:50 +0200
+
+ruby-multi-json (1.10.0-1) unstable; urgency=medium
+
+  * New upstream release
+  * debian/patches/remove_simplecov.patch: removed as simplecov usage was
+    already dropped upstream
+
+ -- Antonio Terceiro <terceiro@debian.org>  Mon, 19 May 2014 12:04:51 -0300
+
+ruby-multi-json (1.8.0-1) unstable; urgency=low
+
+  * Team upload.
+  * Imported Upstream version 1.8.0.
+  * Build-Depends on the proper version of ruby-rspec.
+  * Refresh patches.
+  * Add git-buildpackage configuration.
+
+ -- Jérémy Bobbio <lunar@debian.org>  Wed, 25 Sep 2013 17:25:12 +0200
+
+ruby-multi-json (1.7.7-1) unstable; urgency=low
+
+  * Team upload
+  * Imported Upstream version 1.7.7
+  * debian/control
+    + use canonical URI in Vcs-* fields
+    + build-depend and recommend ruby-oj
+    + recommend all json implementations available, not just one of them
+    + bump Standards-Version to 3.9.4 (no changes needed)
+  * debian/copyright:
+      use DEP5 copyright-format/1.0 official URL for Format field
+  * debian/patches:
+    + add remove_simplecov.patch to remove requirement on simplecov in specs
+    + add fix_encoding.patch to force external encoding to UTF-8
+    + remove skip-oj-tests.patch since ruby-oj is packaged
+
+ -- Cédric Boutillier <boutil@debian.org>  Thu, 15 Aug 2013 14:22:12 +0200
+
+ruby-multi-json (1.3.6-1) unstable; urgency=low
+
+  * New upstream release.
+  * debian/control: add myself to Uploaders:
+  * Run tests during build; added rake, ruby-rspec, ruby-json, ruby-yajl to
+    Build-Depends:
+  * debian/patches/skip-oj-tests.patch: skip test that requires a non-
+    packaged JSON library
+
+ -- Antonio Terceiro <terceiro@debian.org>  Tue, 26 Jun 2012 13:16:21 -0300
+
+ruby-multi-json (1.3.1-2) unstable; urgency=low
+
+  * Bump build dependency on gem2deb to >= 0.3.0~
+
+ -- Antonio Terceiro <terceiro@debian.org>  Sun, 24 Jun 2012 21:56:36 -0300
+
+ruby-multi-json (1.3.1-1) unstable; urgency=low
+
+  * New upstream release
+  * debian/control: Reword Description
+
+ -- Laurent Bigonville <bigon@debian.org>  Tue, 17 Apr 2012 18:27:35 +0200
+
+ruby-multi-json (1.0.4-1) unstable; urgency=low
+
+  * Initial release (Closes: #658877)
+
+ -- Laurent Bigonville <bigon@debian.org>  Mon, 27 Feb 2012 14:16:37 +0100

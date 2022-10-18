@@ -1,0 +1,30 @@
+Source: ruby-multi-json
+Section: ruby
+Priority: optional
+Maintainer: Debian Ruby Extras Maintainers <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
+Uploaders: Cédric Boutillier <boutil@debian.org>
+Build-Depends: debhelper-compat (= 12),
+               gem2deb,
+               rake,
+               ruby-oj,
+               ruby-rspec (>= 2.14)
+Standards-Version: 4.4.1
+Vcs-Git: https://salsa.debian.org/ruby-team/ruby-multi-json.git
+Vcs-Browser: https://salsa.debian.org/ruby-team/ruby-multi-json
+Homepage: https://github.com/intridea/multi_json
+Testsuite: autopkgtest-pkg-ruby
+XS-Ruby-Versions: all
+
+Package: ruby-multi-json
+Architecture: all
+XB-Ruby-Versions: ${ruby:Versions}
+Depends: ruby | ruby-interpreter,
+         ${misc:Depends},
+         ${shlibs:Depends}
+Recommends: ruby-oj
+Description: Ruby library to provide easy switching between different JSON backends
+ A Ruby library to provide easy switching between different JSON backends,
+ including Oj, Yajl, the JSON gem (with C-extensions), the pure-Ruby JSON gem,
+ and OkJson.
+ The Debian package dependencies only provide Oj by default. If you need
+ another backing library, you must install it yourself.

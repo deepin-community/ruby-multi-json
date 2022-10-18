@@ -1,0 +1,75 @@
+Description: disable tests not using the oj gem
+Origin: vendor
+Last-Update: 2020-01-02
+
+
+--- a/spec/multi_json_spec.rb
++++ b/spec/multi_json_spec.rb
+@@ -69,12 +69,12 @@
+     expect(MultiJson.adapter).to eq(MultiJson::Adapters::OkJson)
+   end
+ 
+-  it 'is settable via a symbol' do
++  xit 'is settable via a symbol' do
+     MultiJson.use :json_gem
+     expect(MultiJson.adapter).to eq(MultiJson::Adapters::JsonGem)
+   end
+ 
+-  it 'is settable via a case-insensitive string' do
++  xit 'is settable via a case-insensitive string' do
+     MultiJson.use 'Json_Gem'
+     expect(MultiJson.adapter).to eq(MultiJson::Adapters::JsonGem)
+   end
+@@ -108,7 +108,7 @@
+       expect(MultiJson::Adapters::JsonPure).to receive(:load).once.and_return('load_something')
+     end
+ 
+-    it 'should use the defined parser just for the call' do
++    xit 'should use the defined parser just for the call' do
+       MultiJson.use :json_gem
+       expect(MultiJson.dump('', :adapter => :json_pure)).to eq('dump_something')
+       expect(MultiJson.load('', :adapter => :json_pure)).to eq('load_something')
+@@ -116,7 +116,7 @@
+     end
+   end
+ 
+-  it 'can set adapter for a block' do
++  xit 'can set adapter for a block' do
+     MultiJson.use :ok_json
+     MultiJson.with_adapter(:json_pure) do
+       MultiJson.with_engine(:json_gem) do
+@@ -156,19 +156,19 @@
+ 
+   it_behaves_like 'has options', MultiJson
+ 
+-  describe 'aliases' do
+-    unless skip_adapter?('jr_jackson')
+-      describe 'jrjackson' do
+-        after { expect(MultiJson.adapter).to eq(MultiJson::Adapters::JrJackson) }
+-
+-        it 'allows jrjackson alias as symbol' do
+-          expect { MultiJson.use :jrjackson }.not_to raise_error
+-        end
+-
+-        it 'allows jrjackson alias as string' do
+-          expect { MultiJson.use 'jrjackson' }.not_to raise_error
+-        end
+-      end
+-    end
+-  end
++  #describe 'aliases' do
++  #  unless skip_adapter?('jr_jackson')
++  #    describe 'jrjackson' do
++  #      after { expect(MultiJson.adapter).to eq(MultiJson::Adapters::JrJackson) }
++
++  #      it 'allows jrjackson alias as symbol' do
++  #        expect { MultiJson.use :jrjackson }.not_to raise_error
++  #      end
++
++  #      it 'allows jrjackson alias as string' do
++  #        expect { MultiJson.use 'jrjackson' }.not_to raise_error
++  #      end
++  #    end
++  #  end
++  #end
+ end
