@@ -1,2 +1,3 @@
 fix_encoding.patch
 disable_non_oj_tests
+fix-FTBFS-with-ruby-rspec-3.12.patch

@@ -1,3 +1,32 @@
+ruby-multi-json (1.14.1-2) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Debian Janitor ]
+  * Set upstream metadata fields: Bug-Submit.
+  * Update standards version to 4.5.0, no changes needed.
+
+  [ Cédric Boutillier ]
+  * Update team name
+  * Add .gitattributes to keep unwanted files out of the source package
+
+  [ Debian Janitor ]
+  * Apply multi-arch hints. + ruby-multi-json: Add :any qualifier for ruby
+    dependency.
+  * Remove constraints unnecessary since buster
+  * Bump debhelper from old 12 to 13.
+  * Update standards version to 4.5.1, no changes needed.
+
+  [ HIGUCHI Daisuke (VDR dai) ]
+  * fix FTBFS with ruby-rspec-3.12 (Closes: #1027081)
+  * set Rules-Requires-Root as no.
+  * Drop XS-Ruby-Version and XB-Ruby-Version.
+  * eliminate lintian warning: patch-not-forwarded-upstream
+  * eliminate lintian warning: ruby-interpreter-is-deprecated
+  * Update standards version to 4.6.1.
+
+ -- HIGUCHI Daisuke (VDR dai) <dai@debian.org>  Tue, 03 Jan 2023 10:54:11 +0900
+
 ruby-multi-json (1.14.1-1) unstable; urgency=medium
 
   [ Antonio Terceiro ]
