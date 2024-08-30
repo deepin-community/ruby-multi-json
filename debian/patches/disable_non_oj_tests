@@ -1,7 +1,7 @@
 Description: disable tests not using the oj gem
 Origin: vendor
 Last-Update: 2020-01-02
-
+Forwarded: not-needed
 
 --- a/spec/multi_json_spec.rb
 +++ b/spec/multi_json_spec.rb
